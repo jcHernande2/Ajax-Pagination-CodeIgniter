@@ -9,7 +9,7 @@ class Paginacion extends CI_Controller {
 	{
 		
 	}
-	public function GeneraReporte(){
+	public function GeneraListadoPaginado(){
 		$respuesta=array('error'=>0,'mensaje'=>'','view_result'=>"");
 		$post=array();
 		#se genera el WHERE con los post de campos seleccionados para la busqueda
