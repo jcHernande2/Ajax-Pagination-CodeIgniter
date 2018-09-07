@@ -8,7 +8,7 @@ class Paginacion extends CI_Controller {
 	public function index()
 	{
 		$confi["controller"]="GeneraListadoPaginado";
-		$data['contenido'] = $this->load->view('FormularioPaginacion',$confi,true);
+		$data['FormularioBusqueda'] = $this->load->view('FormularioPaginacion',$confi,true);
 		$this->load->view('index',$data);
 	}
 	public function GeneraListadoPaginado(){
