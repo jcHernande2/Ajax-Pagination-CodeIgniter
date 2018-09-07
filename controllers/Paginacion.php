@@ -7,8 +7,8 @@ class Paginacion extends CI_Controller {
 	}
 	public function index()
 	{
-		$confi["controlador"]="Paginacion";
-		$data['contenido'] = $this->load->view('plantillaFormulario',$confi,true);
+		$confi["controller"]="GeneraListadoPaginado";
+		$data['contenido'] = $this->load->view('FormularioPaginacion',$confi,true);
 		$this->load->view('index',$data);
 	}
 	public function GeneraListadoPaginado(){
@@ -16,7 +16,6 @@ class Paginacion extends CI_Controller {
 		$post=array();
 		#se genera el WHERE con los post de campos seleccionados para la busqueda
 		$where="";
-		
 		$this->load->helper("pagination");
 		$this->load->model("M_Modelo");
 		$post["idForm"]=$this->input->post('idForm');
@@ -27,7 +26,7 @@ class Paginacion extends CI_Controller {
 		$result=$this->M_Modelo->BuscarListar($where,$result_Page["page_start"],$result_Page["page_end"]);
 		$data["consulta"]=$result['query'];
 		$data["pagination"]=$result_Page["PAGINATION_LINKS"];
-		$respuesta['view_result']=$this->load->view('Vista/ListResult',$data,true);
+		$respuesta['view_result']=$this->load->view('ListResult',$data,true);
 		echo json_encode($respuesta);
 	}
 }
