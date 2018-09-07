@@ -7,7 +7,9 @@ class Paginacion extends CI_Controller {
 	}
 	public function index()
 	{
-		
+		$confi["controlador"]="Paginacion";
+		$data['contenido'] = $this->load->view('plantillaFormulario',$confi,true);
+		$this->load->view('index',$data);
 	}
 	public function GeneraListadoPaginado(){
 		$respuesta=array('error'=>0,'mensaje'=>'','view_result'=>"");
