@@ -5,7 +5,7 @@
 				<input name="page" id="page" type="hidden" value=1>
 				<input name="per_page" id="per_page" type="hidden" value=10>
 				<div class="form-group col-md-3">
-					<input id="textbuscar" name="extbuscar" class="form-control" multiple data-rel="chosen">
+					<input id="textbuscar" name="extbuscar" class="form-control" >
 				</div>
 				<div class="form-group col-md-3">
 					<select id="selbuscar" name="selbuscar" class="form-control" multiple data-rel="chosen">
