@@ -14,9 +14,6 @@
 				<div class="form-group col-md-2">
 					<button type="submit" class="btn btn-primary  btn-search" ><i class="fa fa-search"></i> Buscar</button>
 				</div>
-				<div class="form-group col-md-2">
-					<button  type="button" class="btn btn-primary  btn-download" data-controller="<?php echo $controllerExcel;?>"><i class="fa fa-search"></i> Exportar</button>
-				</div>
 			</form>
 		</div>
 		<div class="row">
